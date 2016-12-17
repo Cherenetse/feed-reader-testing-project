@@ -86,12 +86,12 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-        beforeEach(function(callback) {
-            loadFeed(0, callback);
+        beforeEach(function(done) {
+            loadFeed(0, done);
         });
 
         it('loadFeed function is called and completes its work with at least a single .entry element within the .feed container', function() {
-            expect($('.entry').length).not.toBe(0);
+            expect($('.feed .entry').length).not.toBe(0);
         });
     });
 
@@ -101,15 +101,21 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-        beforeEach(function(callback) {
-            loadFeed(0);
-            prevTopPost = $('.entry').eq(0).html();
 
-            loadFeed(1, callback);
-        });
+    beforeEach(function(done) {
+      loadFeed(0, function() {
+        prevTopPost = document.querySelector(".feed .entry").innerHTML;
 
-        it('when a new feed is loaded by the loadFeed function the content actually changes', function() {
-            expect($('.entry').eq(0).html()).not.toEqual(prevTopPost);
+        loadFeed(1, function() {
+          done();
         });
-     });
+      });
+    });
+        it('when a new feed is loaded by the loadFeed function the content actually changes', function(done) {
+      var currentTopPost = document.querySelector('.feed .entry').innerHTML;
+      expect(prevTopPost).not.toBe(currentTopPost);
+      done();
+    });
+  });
+
 }());
