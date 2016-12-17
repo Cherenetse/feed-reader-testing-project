@@ -3,7 +3,7 @@
 
 
 Chages in allfeeds variable runs with error
-![](https://github.com/Cherenetse/feed-reader-testing-project/blob/master/images/capture.PNG)
+![alt tag](https://github.com/Cherenetse/feed-reader-testing-project/blob/master/images/capture.PNG)
 
 
 RSS Feeds:
@@ -36,7 +36,7 @@ New Feed Selection:
 
 
 All tests pass.
-![](https://github.com/Cherenetse/feed-reader-testing-project/blob/master/images/capture2.PNG)
+![alt tag](https://github.com/Cherenetse/feed-reader-testing-project/blob/master/images/capture2.PNG)
 
 
 
