@@ -3,7 +3,7 @@
 
 
 Chages in allfeeds variable runs with error
-![alt error](https://github.com/Cherenetse/feed-reader-testing-project/blob/master/images/capture.PNG)
+![alt error](https://github.com/Cherenetse/feed-reader-testing-project/blob/master/images/capture1.PNG)
 
 
 RSS Feeds:
